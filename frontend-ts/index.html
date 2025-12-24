@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>EcoSystem Dashboard</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    
+   <main class="container">
+      <div class="monitor-wrapper">
+        <article class="glass-card">
+          <header>
+            <h2 style="margin:0;">Estado del Fusible</h2>
+          </header>
+          <div class="status-container">
+            <span id="fusible-ui" class="status-badge">CARGANDO...</span>
+          </div>
+          <footer>
+            <small>Última sincronización: <span id="time-display">--:--:--</span></small>
+          </footer>
+        </article>
+      </div>
+      <section>
+        <div id="log-console">Sistema Operativo Conectado via Go</div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

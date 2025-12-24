@@ -1,0 +1,26 @@
+# Ejecutables de Go
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+bin/
+
+# Dependencias y variables sensibles
+.env
+node_modules
+vendor/
+
+# Archivos de Sistema y Editores
+.vscode/
+.idea/
+*.swp
+*.DS_Store
+Thumbs.db
+
+# Logs de error
+*.log
+npm-debug.log*
+
+# XAMPP / Archivos temporales
+phpmyadmin/

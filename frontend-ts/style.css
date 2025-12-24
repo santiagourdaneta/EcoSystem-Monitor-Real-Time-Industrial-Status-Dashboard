@@ -1,0 +1,116 @@
+/* Custom Properties para el esquema de colores */
+:root {
+  --bg-color: #0b0e14;
+  --card-bg: #151921;
+  --text-main: #e6edf3;
+  --accent-color: #3fb950; /* Verde éxito */
+  --danger-color: #f85149; /* Rojo falla */
+  --border-color: #30363d;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  font-family:
+    "Segoe UI",
+    system-ui,
+    -apple-system,
+    sans-serif;
+}
+
+/* Contenedores y Tarjetas */
+article {
+  background: var(--card-bg) !important;
+  border: 1px solid var(--border-color) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  transition: transform 0.2s ease;
+}
+
+article:hover {
+  transform: translateY(-2px);
+}
+
+/* Badge del Fusible con Efecto de Pulsación */
+.status-badge {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  border-radius: 50px;
+  font-weight: 800;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: all 0.4s ease;
+}
+
+.CERRADO {
+  background: rgba(63, 185, 80, 0.15);
+  color: #3fb950;
+  border: 1px solid #3fb950;
+  box-shadow: 0 0 15px rgba(63, 185, 80, 0.3);
+}
+
+.ABIERTO {
+  background: rgba(248, 81, 73, 0.15);
+  color: #f85149;
+  border: 1px solid #f85149;
+  box-shadow: 0 0 15px rgba(248, 81, 73, 0.3);
+  animation: pulse-red 2s infinite;
+}
+
+@keyframes pulse-red {
+  0% {
+    box-shadow: 0 0 0 0 rgba(248, 81, 73, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(248, 81, 73, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(248, 81, 73, 0);
+  }
+}
+
+/* Terminal de Logs */
+#response-box {
+  background: #010409 !important;
+  color: #7ee787;
+  border: 1px solid var(--border-color);
+  padding: 1rem;
+  font-family: "Fira Code", "Courier New", monospace;
+  font-size: 0.9rem;
+  border-radius: 6px;
+  min-height: 120px;
+  white-space: pre-wrap;
+}
+
+/* Formulario */
+input[type="text"],
+input[type="password"] {
+  background-color: #0d1117 !important;
+  border-color: var(--border-color) !important;
+  color: white !important;
+}
+
+input:focus {
+  border-color: #58a6ff !important;
+  box-shadow: 0 0 0 2px rgba(88, 166, 255, 0.3) !important;
+}
+
+button.contrast {
+  background-color: #238636 !important;
+  border: none;
+  font-weight: bold;
+}
+
+button.contrast:hover {
+  background-color: #2ea043 !important;
+}
+
+/* Header */
+h1 {
+  color: #58a6ff;
+  margin-bottom: 0.5rem;
+}
+
+.grid-header p {
+  color: #8b949e;
+}
